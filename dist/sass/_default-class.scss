@@ -1,0 +1,27 @@
+@import "custom";
+
+body {
+  font-family: Arial;
+  color: $standartFont;
+  margin: 0 auto;
+  h4{
+    font-size: 16px;
+    margin: 0 auto;
+    color: $hFont;
+  }
+  h5{
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  h6{
+    margin: 0 auto;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  p{
+    margin: 0 auto;
+    color: $standartFont;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
