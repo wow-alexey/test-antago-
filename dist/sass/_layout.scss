@@ -1,8 +1,91 @@
 @import "custom";
 
-@media (max-width: 720px) {
-
+@media (max-width: 489px) {
+  body p {
+    font-size: 13px !important;
+  }
 }
-@media (max-width: 490px) {
 
+@media (max-width: 467px) {
+  body p {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 441px) {
+  .status {
+    padding: 7px 1% 7px 49px !important;
+  }
+  body {
+    h4 {
+      font-size: 14px !important;
+    }
+    h5 {
+      font-size: 11px !important;
+    }
+    p {
+      font-size: 11px !important;
+    }
+  }
+  main {
+    a {
+      font-size: 12px !important;
+    }
+    span {
+      font-size: 11px !important;
+    }
+    .full-date {
+      font-size: 10px !important;
+    }
+    button{
+      font-size: 13px !important;
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  body p {
+    font-size: 9px !important;
+    line-height: 14px !important;
+  }
+  table{
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 371px) {
+  body {
+    h4 {
+      font-size: 13px !important;
+    }
+    h5 {
+      font-size: 10px !important;
+    }
+  }
+  main {
+    a {
+      font-size: 11px !important;
+    }
+    span {
+      font-size: 10px !important;
+    }
+    .full-date {
+      font-size: 9px !important;
+    }
+    button{
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media (max-width: 341px) {
+  main .wrapper {
+    margin: 0 15px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  table {
+    font-size: 9px !important;
+  }
 }
