@@ -4,10 +4,16 @@
   body p {
     font-size: 13px !important;
   }
+  .comment-content{
+    font-size: 13px !important;
+  }
 }
 
 @media (max-width: 467px) {
   body p {
+    font-size: 12px !important;
+  }
+  .comment-content{
     font-size: 12px !important;
   }
 }
@@ -24,6 +30,9 @@
       font-size: 11px !important;
     }
     p {
+      font-size: 11px !important;
+    }
+    .comment-content{
       font-size: 11px !important;
     }
   }
@@ -47,6 +56,9 @@
   body p {
     font-size: 9px !important;
     line-height: 14px !important;
+  }
+  .comment-content{
+    font-size: 9px !important;
   }
   table{
     font-size: 11px !important;

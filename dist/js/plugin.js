@@ -2,6 +2,9 @@
     var btn = $('.btn');
     var textarea = $('.textarea');
     var error = $('.error');
+    var comments = $('.user-comments');
+    var reply = $('.reply');
+    var recalls = $('.recalls');
 
     function check(e) {
         e.preventDefault();
@@ -12,8 +15,14 @@
             error.addClass('show');
 
         } else {
-            textarea.removeClass('error-border');
-            error.removeClass('show');
+            comments.append('<div class="reply">' +
+                                '<h5 class="user-name">Имя пользователя</h5>' +
+                                '<div class="full-date">'+ getDate() +'</div>' +
+                                '<div class="comment-content">'+ textareaContent +'</div>' +
+                            '</div>');
+            (function clean() {
+                textarea.val('');
+            })();
             console.log(textareaContent);
         }
         textarea.focus(function () {
@@ -32,8 +41,14 @@
                 textarea.addClass('error-border');
                 error.addClass('show');
             } else {
-                textarea.removeClass('error-border');
-                error.removeClass('show');
+                comments.append('<div class="reply">' +
+                                    '<h5 class="user-name">Имя пользователя</h5>' +
+                                    '<div class="full-date">'+ getDate() +'</div>' +
+                                    '<div class="comment-content">'+ textareaContent +'</div>' +
+                                '</div>');
+                (function clean() {
+                    textarea.val('');
+                })();
                 console.log(textareaContent);
             }
             textarea.focus(function () {
@@ -45,25 +60,16 @@
 
 })(jQuery);
 
-;(function getDate() {
+function getDate() {
     var date = new Date();
     var options = {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
     };
-    console.log(date.toLocaleString("ru", options));
 
-})(jQuery);
-
-// ;(function () {
-//     var btn = $('.btn');
-//     btn.keydown(function (e) {
-//
-//         if (e.ctrlKey && e.keyCode == 13) {
-//             // Ctrl-Enter pressed
-//         }
-//     });
-//
-// })(jQuery);
+    var newDate = date.toLocaleString("ru", options);
+    var res = newDate.substring(0, newDate.length - 3);
+    return res;
+};
 
