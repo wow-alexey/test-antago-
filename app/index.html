@@ -24,7 +24,7 @@
                 <div class="status">
                     <p>Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны</p>
                 </div>
-                <img src="img/photo.jpg" alt="photo">
+                <div class="photo"><img src="img/photo.jpg" alt="photo"></div>
             </div>
             <div class="services">
                 <h6>Услуг</h6>
@@ -44,39 +44,47 @@
                         </tr>
                     </table>
                 </div>
-                <h4>Всего</h4>
-                <h4 class="summ">15</h4>
+                <span>Всего</span>
+                <span class="summ">15</span>
             </div>
         </div>
         <div class="recall">
-            <h4>Последние отзывы</h4>
-            <a href="#">Все отзывы</a>
-            <div class="full-like">
-                <span class="likes">131</span>
-                <span class="recalls">14</span>
+            <div class="comments-header">
+                <h4>Последние отзывы</h4>
+                <a href="#">Все отзывы</a>
+                <div class="full-like">
+                    <span class="likes">131</span>
+                    <span class="recalls">14</span>
+                </div>
             </div>
             <div class="user-comments">
-                <div class="reply">
-                    <h5 class="user-name">Самуил</h5>
-                    <div class="full-date">13 октября 2011</div>
-                    <div class="comment-content">
+                <div class="message">
+                    <div class="user-information">
+                        <h5 class="user-name">Самуил</h5>
+                        <div class="message-day">13 октября 2011</div>
+                    </div>
+                    <div class="text-message">
                         <p>Привет, Верунь! ниче себе ты крутая. фотка класс!!!!</p>
                     </div>
                 </div>
-                <div class="reply">
-                    <h5 class="user-name">Лилия Семёновна</h5>
-                    <div class="full-date">14 октября 2011</div>
-                    <div class="comment-content">
+                <div class="message">
+                    <div class="user-information">
+                        <h5 class="user-name">Лилия Семёновна</h5>
+                        <div class="message-day">14 октября 2011</div>
+                    </div>
+                    <div class="text-message">
                         <p>Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц
                             жизненно стабилизирует кинетический момент, это и есть
                             всемирно известный центр огранки алмазов и торговли
                             бриллиантами?</p>
                     </div>
                 </div>
-                <div class="reply">
-                    <h5 class="user-name">Лилия Семёновна</h5>
-                    <div class="full-date">14 октября 2011</div>
-                    <div class="comment-content">
+                <div class="message">
+                    <div class="user-information">
+                        <h5 class="user-name">Лилия Семёновна</h5>
+                        <div class="message-day">14 октября 2011</div>
+                    </div>
+                    <div class="text-message">
                         <p>Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц
                             жизненно стабилизирует кинетический момент?</p>
                     </div>
@@ -86,7 +94,7 @@
     </div>
     <div class="your-comment">
         <div class="wrapper">
-            <form action="">
+            <form>
                 <textarea class="textarea"></textarea>
                 <span class="error">* заполните это поле</span>
                 <button class="btn">Написать консультанту</button>

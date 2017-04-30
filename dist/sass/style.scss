@@ -33,13 +33,17 @@ main {
             line-height: 20px;
           }
         }
-        img {
+        .photo {
           position: absolute;
           left: 1px;
           top: -8px;
-          border-radius: 50%;
+          max-width: 120px;
+          max-height: 122px;
+          img{
+            border-radius: 50%;
+          }
         }
-      }
+     }
       .services {
         margin-top: 12px;
         h6 {
@@ -75,53 +79,40 @@ main {
                 td {
                   padding-left: 5px;
                   position: relative;
-                  &.firstRow:before {
+                  &:before {
                     position: absolute;
                     content: " ";
                     border-bottom-right-radius: 3px;
                     border-top-right-radius: 3px;
+                    background-color: $blueBg;
+                    height: 24px;
+                    opacity: 0.4;
+                    left: -2px;
+                    top: 0;
+                  }
+                  &.firstRow:before{
                     background-color: $grenBg;
                     width: 86%;
-                    height: 24px;
-                    opacity: 0.4;
-                    left: -2px;
-                    top: 0;
                   }
                   &.secondRow:before {
-                    position: absolute;
-                    content: " ";
-                    border-bottom-right-radius: 3px;
-                    border-top-right-radius: 3px;
-                    background-color: $blueBg;
                     width: 21.5%;
-                    height: 24px;
-                    opacity: 0.4;
-                    left: -2px;
-                    top: 0;
                   }
                   &.thirdRow:before {
-                    position: absolute;
-                    content: " ";
-                    border-bottom-right-radius: 3px;
-                    border-top-right-radius: 3px;
-                    background-color: $blueBg;
                     width: 14%;
-                    height: 24px;
-                    opacity: 0.4;
-                    left: -2px;
-                    top: 0;
                   }
                 }
               }
             }
           }
         }
-        h4 {
+        span {
           display: inline-block;
           margin-top: 9px;
+          letter-spacing: 1px;
+          font-weight: bold;
           &.summ {
             float: right;
-            margin-right: 13.7%;
+            margin-right: 13%;
           }
         }
       }
@@ -129,7 +120,7 @@ main {
     .recall {
       margin-top: 23px;
       h4 {
-        color: $hFont;
+        color: $standartFont;
         display: inline-block;
       }
       a {
@@ -151,43 +142,50 @@ main {
           + span {
             margin-left: 15px;
           }
-          &.likes:before {
+          &:before{
             content: ' ';
-            background: url("../../app/img/like.png");
+            background: url("../../app/img/sprite.png");
             display: inline-block;
+          }
+          &.likes:before {
+            background-position: 0 -40px;
             width: 12px;
             height: 12px;
             margin-right: 3px;
             vertical-align: middle;
           }
+          &.likes:hover:before {
+            background-position: 0 -28px;
+          }
           &.recalls:before {
-            content: ' ';
-            background: url("../../app/img/recall.png");
-            display: inline-block;
+            background-position: 0 -14px;
             width: 13px;
             height: 14px;
             margin-right: 4px;
             vertical-align: sub;
           }
+          &.recalls:hover:before {
+            background-position: 0 0;
+          }
         }
       }
       .user-comments {
         margin-top: 12px;
-        .reply {
+        .message {
           .user-name {
             color: $standartFont;
             font-size: 14px;
             font-weight: 700;
             display: inline-block;
           }
-          .full-date {
+          .message-day {
             display: inline-block;
             color: #808080;
             font-size: 11px;
             font-weight: 400;
             margin-left: 3px;
           }
-          .comment-content{
+          .text-message{
             margin-top: 11px;
             border: 1px solid #cfcfcf;
             background: $commentBg;
@@ -214,7 +212,7 @@ main {
               left: 23px;
             }
           }
-          +.reply{
+          +.message{
             margin-top: 18px;
           }
         }
